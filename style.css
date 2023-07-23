@@ -40,6 +40,15 @@
 body {
 	margin: 0;
 }
+
+.cont-category-items {
+	margin-top: 100px;
+	width: 100%;
+	display: flex;
+	gap: 11%;
+	justify-content: center;
+	flex-wrap: wrap;
+}
 @media (min-width: 1920px) {
 	/* :root {
 
@@ -52,6 +61,9 @@ body {
 	}
 }
 @media (max-width: 1920px) {
+	.cont-category-items {
+		gap: 9%;
+	}
 	body > * {
 		transform: scale(0.7) ;
 	}
@@ -113,14 +125,6 @@ header a:hover {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-}
-.cont-category-items {
-	margin-top: 100px;
-	width: 100%;
-	display: flex;
-	gap: 11%;
-	justify-content: center;
-	flex-wrap: wrap;
 }
 
 .cont-category-items button{
