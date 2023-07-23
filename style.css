@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@600&display=swap');
+@font-face {
+	font-family: "blackberry";
+	src: url(шрифты/blackberry-normal_version_01.otf);
+}
+
+:root {
+	--logo-height: 320px;
+	--logo-width: 740px;
+	--category-button: 330px;
+}
+
+.logo {
+	cursor: pointer;
+	margin-top: 100px;
+	background-image: url(фото/лого.png);
+	background-size: cover;
+	width: var(--logo-width);
+	height: var(--logo-height);
+}
+
+.nav-button {
+	cursor: pointer;
+	border-radius: 33px;
+	width: 330px;
+	height: 66px;
+	border: none;
+	background: #B6CDFF;
+	background-blend-mode: multiply;
+	box-shadow: -4px -4px 4px 0px #CFDEFF, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.body-background {
+	background-repeat: no-repeat;
+ background-image: url(фото/body-фон.png);
+	width: 100%;
+	height: 2015px;
+	background-position: bottom;
+}
+body {
+	margin: 0;
+}
+@media (min-width: 1920px) {
+	/* :root {
+
+	} */
+	.body-background {
+		height: 2160px;
+	}
+	.logo {
+		margin-top: 200px;
+	}
+}
+@media (max-width: 1920px) {
+	body > * {
+		transform: scale(0.7) ;
+	}
+	.body-background {
+		background-size: contain;
+	}
+	body {
+		margin-top: -600px;
+	}
+	header {
+		padding-top: 450px;
+	}
+	.categories {
+		margin-top: -400px;
+	}
+	footer {
+		margin-top: -80px;
+	}
+}
+
+/* video {
+
+} */
+
+header {
+	height: 66.5%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.menu-text {
+	font-family: "blackberry";
+}
+
+header a {
+	transition: .5s;
+	color: #336699;
+	text-decoration: none;
+}
+header a:hover {
+	filter: brightness(130%);
+}
+
+.categories {
+	text-align: center;
+	color: black;
+}
+.categories a{
+	text-decoration: none;
+	color: black;
+}
+.h-text {
+	font-size: 36px;
+}
+.cont-categories {
+	margin-bottom: 100px;
+	padding-top: 130px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.cont-category-items {
+	margin-top: 100px;
+	width: 100%;
+	display: flex;
+	gap: 11%;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.cont-category-items button{
+	cursor: pointer;
+	border-radius: 33px;
+	height: 66px;
+	border: none;
+	background: #B6CDFF;
+	background-blend-mode: multiply;
+	box-shadow: -4px -4px 4px 0px #CFDEFF, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* button {transition: .1s;} */
+button:hover {
+	filter: brightness(110%);
+}
+
+footer {
+	justify-content: center;
+	align-items: center;
+	gap: 17.7%;
+	background-color: #EFF4FF;
+	width: 100%;
+	height: 228px;
+	display: flex;
+}
+html {
+	background-color: #EFF4FF;
+}
+
+.footer-item {
+	transition: .5s;
+	cursor: pointer;
+	gap: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 270px;
+}
+
+.footer-item:hover {
+	filter: brightness(105%);
+}
+
+.footer-item a {
+	font-family: "Grandstander";
+	text-decoration: none;
+	font-size: 17px;
+	color: #243E78;
+}
+
+.footer-icon-inst {
+	background-image: url(фото/инста.png);
+	height: 80px;
+	width: 80px;
+	background-size: contain;
+}
+
+.footer-icon-mail {
+	background-image: url(фото/почта.png);
+	height: 80px;
+	width: 80px;
+	background-size: contain;
+}
+.footer-icon-vk {
+	background-image: url(фото/вк.png);
+	height: 80px;
+	width: 80px;
+	background-size: contain;
+}
+
+.store-description {
+	color: #336699;
+	transition: 5s;
+	font-family: 'blackberry'; 
+	font-size: 44px;
+	opacity: 0;
+}

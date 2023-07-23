@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pocztowka</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class="body-background" onload="description();">
+	<!-- <video src="фото/" autoplay loop muted></video> -->
+	<header>
+		<div style="display: flex; margin-top: 90px; gap: 20%; width: 100%; justify-content: center;">
+			<button class="nav-button"><a href="#" class="menu-text h-text">РЕГИСТРАЦИЯ</a></button>
+			<button class="nav-button"><a href="#" class="menu-text h-text">ВХОД</a></button>
+			<button class="nav-button"><a href="#" class="menu-text h-text">КОРЗИНА</a></button>
+		</div>
+		<div class="logo"></div>
+		<p class="store-description">Уютный магазин открыток!</p>
+	</header>
+	<section class="categories">
+		<div class="cont-categories">
+			<span class="menu-text" style="font-size: 72px;">КАТЕГОРИИ</span>
+			<div class="cont-category-items">
+				<button style="width: var(--category-button);"><a class="h-text menu-text" href="#">НОВЫЙ ГОД</a></button>
+				<button style="width: calc(40px + (var(--category-button)));"><a class="h-text menu-text" href="#">ДЕНЬ РОЖДЕНИЯ</a></button>
+				<button style="width: var(--category-button);"><a class="h-text menu-text" href="#">ДЕНЬ ЗНАНИЙ</a></button>
+				<button style="height: 105px; border-radius: 52.5px; width: calc(34px + (var(--category-button))); margin-top: 100px; margin-left: -20px;"><a class="h-text menu-text" style="width: 270px;" href="#">БОТАНИЧЕСКИЕ ИЛЛЮСТРАЦИИ</a></button>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="footer-item">
+			<div class="footer-icon-inst"></div>
+			<a href="" style="margin-top: 10px;">Instagram</a>
+			<a href="">@elizaveta.myagkaya</a>
+		</div>
+		<div class="footer-item">
+			<div class="footer-icon-vk"></div>
+			<a href="" style="margin-top: 10px;">VKontakte</a>
+			<a href="">@elizaveta.myagkaya</a>
+		</div>
+		<div class="footer-item">
+			<div class="footer-icon-mail"></div>
+			<a href="" style="margin-top: 10px;">Mail</a>
+			<a href="">svobodni.xudognik@yandex.ru</a>
+		</div>
+
+</body>
+<script>
+	function description() {
+		let storeDescription = document.getElementsByClassName('store-description')[0];
+		storeDescription.style.opacity = 1;
+	}
+
+</script>
+</html>
