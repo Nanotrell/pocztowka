@@ -49,7 +49,7 @@ body {
 	justify-content: center;
 	flex-wrap: wrap;
 }
-@media (min-width: 1919px) {
+@media (min-width: 1800px) {
 	/* :root {
 
 	} */
@@ -60,7 +60,7 @@ body {
 		margin-top: 200px;
 	}
 }
-@media (max-width: 1920px) {
+@media (max-width: 1800px) {
 	.cont-category-items {
 		gap: 9%;
 	}
