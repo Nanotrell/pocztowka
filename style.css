@@ -203,3 +203,16 @@ html {
 	font-size: 44px;
 	opacity: 0;
 }
+.basket-index {
+	margin-left: 30px;
+	background-color: #fff;
+	width: 46px;
+	height: 46px;
+	border: 2px solid #3E5482;
+	color: #729DFA;
+	font-family: "blackberry";
+	border-radius: 50%;
+	font-size: 35px;
+	display: inline-block;
+	line-height: 46px;
+}
