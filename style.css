@@ -3,90 +3,196 @@
 	font-family: "blackberry";
 	src: url(шрифты/blackberry-normal_version_01.otf);
 }
+@font-face {
+	font-family: "Trebuchet MS";
+	src: url(шрифты/trebuchetms.ttf);
+}
 
 :root {
-	--logo-height: 320px;
-	--logo-width: 740px;
-	--category-button: 330px;
+	--card-img-height: 439px;
+	--card-width: 364px;
 }
 
-.logo {
-	cursor: pointer;
-	margin-top: 100px;
-	background-image: url(фото/лого.png);
-	background-size: cover;
-	width: var(--logo-width);
-	height: var(--logo-height);
+.logo-text {
+	font-family: "blackberry";
+	font-size: 90px;
+	color: #CFDEFF;
+	text-align: center;
+	margin-top: 0;
+	padding-top: 90px;
+	margin-bottom: 50px;
+	font-weight: 500;
 }
 
-.nav-button {
-	cursor: pointer;
-	border-radius: 33px;
-	width: 330px;
-	height: 66px;
-	border: none;
-	background: #B6CDFF;
-	background-blend-mode: multiply;
-	box-shadow: -4px -4px 4px 0px #CFDEFF, 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+.page-h {
+	text-align: center;
+	font-family: "Trebuchet MS";
+	font-size: 50px;
+	margin-top: 0;
+	font-variant: small-caps;
+	letter-spacing: 2px;
 }
-
-.body-background {
-	background-repeat: no-repeat;
- background-image: url(фото/body-фон.png);
-	width: 100%;
-	height: 2015px;
-	background-position: bottom;
-}
-body {
+.data-section p {
+	font-variant: small-caps;
+	letter-spacing: 1px;
+	font-weight: 700;
+	font-size: 48px;
 	margin: 0;
 }
 
-.cont-category-items {
-	margin-top: 100px;
+.data-section-cont {
+	margin-top: 27px;
+	padding: 70px 0 0 70px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	font-variant: small-caps;
+	font-size: 46px;
+	width: 100%;
+	height: 624px;
+	border-radius: 65px;
+	background-color: #EDF3FF;
+	margin-bottom: 0px;
+}
+
+select {
+	cursor: pointer;
+	overflow: hidden;
+	padding-right: 2em;
+	padding-left: .5em;
+	font-family: "Trebuchet MS";
+	font-size: 38px;
+	height: 76px;
+	width: 493px;
+	outline: none;
+	border: none;
+	text-align: center;
+	background: url(фото/select-arrow.png) no-repeat right;
+	border-radius: 25px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	z-index: 2;
+	position: absolute;
+}
+
+.select-back {
+	position: absolute;
+	filter: drop-shadow(0px 4px 4px rgba(63, 85, 132, 0.35)) drop-shadow(-2px -1px 4px rgba(255, 255, 255, 0.30));
+	background-color: #CEDEFF;
+	border-radius: 25px;
+	height: 76px;
+	width: 433px;
+}
+
+option {
+	background-color: #CEDEFF;
+	font-size: 20px;
+}
+
+input {
+	font-family: 'Trebuchet MS'; 
+	padding: 0 20px 0 20px; 
+	font-size: 36px; 
+	filter: drop-shadow(0px 4px 4px rgba(63, 85, 132, 0.35)) drop-shadow(-2px -1px 4px rgba(255, 255, 255, 0.30)); 
+	background-color: #CEDEFF; 
+	border-radius: 25px; 
+	border: none; 
+	outline: none; 
+	width: 552px; 
+	height: 76px;
+}
+
+.data-section {
+	font-family: "Trebuchet MS";
+	width: 63.5%;
+	margin-top: 180px;
+}
+
+.footer-cont {
+	justify-content: center;
+	align-items: center;
+	gap: 17.7%;
+	background-color: #EFF4FF;
+	width: 100%;
+	height: 228px;
+	display: flex;
+}
+
+.cont-data-section {
 	width: 100%;
 	display: flex;
-	gap: 11%;
-	justify-content: center;
-	flex-wrap: wrap;
+ flex-direction: column;
+	align-items: center;
+	margin-bottom: 100px;
+	margin-top: 0;
 }
-@media (min-width: 1800px) {
-	/* :root {
 
-	} */
-	.body-background {
-		height: 2160px;
-	}
-	.logo {
-		margin-top: 200px;
-	}
+.category-h {
+	padding: 100px 0 150px 0;
+	width: 7em;
+	margin: 0;
+	text-align: center;
+	font-family: "blackberry";
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-transform: uppercase;
 }
-@media (max-width: 1800px) {
-	.cont-category-items {
-		gap: 9%;
+
+@media (max-width: 1800px) { 
+	.category-h {
+		padding: 50px 0 100px 0;
+	}
+	.cont-data-section {
+		margin-top: -450px;
+		margin-bottom: -200px;
+	}
+	.data-section {
+		width: 80%;
+		margin-bottom: -70px;
+	}
+	.data-section-cont {
+		font-size: 38px;
+		height: 500px;
+	}
+	.data-section p {
+		font-size: 40px;
+	}
+	.page-h {
+		font-size: 40px;
+	}
+	.logo-text {
+		padding-top: 70px;
+		margin-bottom: -10px;
 	}
 	body > * {
 		transform: scale(0.7) ;
 	}
-	.body-background {
-		background-size: contain;
-	}
-	body {
-		margin-top: -600px;
-	}
-	header {
-		padding-top: 450px;
-	}
-	.categories {
-		margin-top: -400px;
-	}
 	footer {
-		margin-top: -80px;
+		transform: scale(1);
+	}
+	.footer-cont {
+		transform: scale(0.7) ;
+	}
+	.cont-goods-cards {
+		margin-top: -150px;
+	}
+	:root {
+		--card-img-height: 360px;
+		--card-width: 300px;
 	}
 }
 
 /* video {
 
 } */
+
+body {
+	background-color: #fff;
+	margin: 0;
+}
 
 header {
 	height: 66.5%;
@@ -103,9 +209,6 @@ header a {
 	transition: .5s;
 	color: #336699;
 	text-decoration: none;
-}
-header a:hover {
-	filter: brightness(130%);
 }
 
 .categories {
@@ -128,7 +231,6 @@ header a:hover {
 }
 
 .cont-category-items button{
-	cursor: pointer;
 	border-radius: 33px;
 	height: 66px;
 	border: none;
@@ -143,13 +245,8 @@ button:hover {
 }
 
 footer {
-	justify-content: center;
-	align-items: center;
-	gap: 17.7%;
 	background-color: #EFF4FF;
 	width: 100%;
-	height: 228px;
-	display: flex;
 }
 html {
 	background-color: #EFF4FF;
@@ -215,4 +312,111 @@ html {
 	font-size: 35px;
 	display: inline-block;
 	line-height: 46px;
+}
+
+/* для элемента input c type="radio" */
+.custom-radio>input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+/* для элемента label связанного с .custom-radio */
+.custom-radio>span {
+	display: inline-flex;
+	align-items: center;
+	user-select: none;
+}
+
+/* создание в label псевдоэлемента  before со следующими стилями */
+.custom-radio>span::before {
+	content: '';
+	display: inline-block;
+	width: 54px;
+	height: 50px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	box-sizing: border-box;
+	border: 12px solid #729DFA;
+	background-color: #fff;
+	border-radius: 50%;
+	margin-right: 0.8em;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 50% 50%;
+	filter: drop-shadow(0px 4px 4px rgba(62, 84, 130, 0.61)) drop-shadow(-4px -4px 4px rgba(255, 255, 255, 0.25));
+}
+
+/* стили при наведении курсора на радио */
+.custom-radio>input:not(:disabled):not(:checked)+span:hover::before {
+	border-color: #8db5e4;
+}
+
+/* стили для активной радиокнопки (при нажатии на неё) */
+.custom-radio>input:not(:disabled):active+span::before {
+	background-color: #b3d7ff;
+}
+
+/* стили для радиокнопки, находящейся в фокусе */
+.custom-radio>input:focus+span::before {
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+/* .custom-radio>input:focus:not(:checked)+span::before {
+	border-color: #80bdff;
+} */
+
+/* стили для радиокнопки, находящейся в состоянии checked */
+.custom-radio>input:checked+span::before {
+	background-color: #3E5482;
+	filter: drop-shadow(0px 6px 6px rgba(62, 84, 130, 0.61)) drop-shadow(-6px -6px 6px rgba(255, 255, 255, 0.25));
+}
+
+/* стили для радиокнопки, находящейся в состоянии disabled */
+.custom-radio>input:disabled+span::before {
+	background-color: #e9ecef;
+}
+
+button {
+	cursor: pointer;
+}
+
+.cont-goods-cards button {
+	color: #3F5584;
+	text-align: center;
+	font-family: Trebuchet MS;
+	font-size: 31px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	font-variant: small-caps;
+	width: 87.9%;
+	height: 76px;
+	border: none;
+	border-radius: 17px;
+	background: #CEDEFF;
+	box-shadow: 0px 4px 4px 0px rgba(11, 42, 109, 0.42), -4px -4px 4px 0px rgba(255, 255, 255, 0.25);
+}
+.cont-goods-cards {
+	justify-content: center;
+	flex-wrap: wrap;
+	display: flex;
+	gap: 13.5%;
+}
+.goods-card {
+	margin-bottom: 90px;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+	width: var(--card-width);
+}
+.goods-img {
+	border-radius: 65px;
+	background-position: center;
+	background-size: cover;
+	height: var(--card-img-height);
+	width: 100%;
+	background: #EDF3FF;
 }
