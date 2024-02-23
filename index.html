@@ -1,60 +1,462 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Pocztowka - главная страница</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="media.css">
-</head>
-<body class="body-background" onload="description();">
-	<!-- <video src="фото/" autoplay loop muted></video> -->
-	<header>
-		<div style="display: flex; margin-top: 90px; gap: 20%; width: 100%; justify-content: center;">
-			<a href="#" class="h-text"><button class="nav-button menu-text">РЕГИСТРАЦИЯ</button></a>
-			<a href="#" class="h-text"><button class="nav-button menu-text">ВХОД</button></a>
-			<a href="basket.html" class="h-text"><button class="nav-button menu-text">КОРЗИНА<div class="basket-index">0</div></button></a>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Почтовка - главная страница</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="basket-cont">
+			<div class="button-close">&#215;</div>
+			<div class="page-heading">
+				<h1 class="berry-font">Почтовка</h1>
+				<h2>КОРЗИНА</h2>
+			</div>
+			<div class="basket-goods-cont"></div>
 		</div>
-		<a class="logo" href="index.html"></a>
-		<p class="store-description">Уютный магазин открыток!</p>
-	</header>
-	<section class="categories">
-		<div class="cont-categories">
-			<span class="menu-text" style="font-size: 72px;">КАТЕГОРИИ</span>
-			<div class="cont-category-items">
-				<a class="h-text" href="new-year.html"><button class="menu-text" style="width: var(--category-button);">НОВЫЙ ГОД</button></a>
-				<a class="h-text" href="birth-day.html"><button class="menu-text" style="width: calc(40px + (var(--category-button)));">ДЕНЬ РОЖДЕНИЯ</button></a>
-				<a class="h-text" href="knowledges.html"><button class="menu-text" style="width: var(--category-button);">ДЕНЬ ЗНАНИЙ</button></a>
-				<a class="h-text" href="botanic.html"><button class="menu-text" style="height: 105px; border-radius: 52.5px; width: calc(34px + (var(--category-button))); margin-top: 100px;">БОТАНИЧЕСКИЕ ИЛЛЮСТРАЦИИ</button></a>
-			</div>
-		</div>
-	</section>
-	<footer>
-		<div class="footer-cont">
-			<div class="footer-item">
-				<div class="footer-icon-inst"></div>
-				<a href="@elizaveta.myagkaya" style="margin-top: 10px;">Instagram</a>
-				<a href="@elizaveta.myagkaya">@elizaveta.myagkaya</a>
-			</div>
-			<div class="footer-item">
-				<div class="footer-icon-vk"></div>
-				<a href="https://vk.com/lizon_zon_zon" style="margin-top: 10px;">VKontakte</a>
-				<a href="https://vk.com/lizon_zon_zon">vk.com/lizon_zon_zon</a>
-			</div>
-			<div class="footer-item">
-				<div class="footer-icon-mail"></div>
-				<a href="" style="margin-top: 10px;">Mail</a>
-				<a href="">svobodni.xudognik@yandex.ru</a>
-			</div>
-		</div>
-	</footer>
-</body>
-<script>
-	function description() {
-		let storeDescription = document.getElementsByClassName('store-description')[0];
-		storeDescription.style.opacity = 1;
-	}
 
-</script>
+		<div class="register-cont">
+			<div class="button-close">&#215;</div>
+			<div class="page-heading">
+				<h1 class="berry-font">Почтовка</h1>
+				<h2>РЕГИСТРАЦИЯ</h2>
+			</div>
+			<br><br>
+			<form>
+				<input type="text" name="email" id="email" placeholder="Электронная почта"/>
+				<input type="text" name="password" id="password" placeholder="Пароль"/>
+				<button>Зарегистрироваться</button>
+			</form>
+		</div>
+
+		<div class="login-cont">
+			<div class="button-close">&#215;</div>
+			<div class="page-heading">
+				<h1 class="berry-font">Почтовка</h1>
+				<h2>ВОЙТИ</h2>
+			</div>
+			<br><br>
+			<form>
+				<input type="text" name="email" id="email" placeholder="Электронная почта"/>
+				<input type="text" name="password" id="password" placeholder="Пароль"/>
+				<button>Войти</button>
+			</form>
+		</div>
+
+		<div class="head-img"></div>
+		<div class="container">
+			<header class="berry-font">
+				<div class="header-cont-1">
+					<button class="register-button"><a>регистрация</a></button>
+					<button class="login-button"><a>вход</a></button>
+					<button
+						style="display: flex; justify-content: space-around; align-items: center"
+						class="basket-button"
+					>
+						<a>корзина</a>
+						<div class="basket-index"><span>0</span></div>
+					</button>
+				</div>
+				<div class="header-cont-2">
+					<div class="logo"></div>
+					<div class="small-privetstvie">
+						Доставка Радости <br />
+						<div style="text-align: center">По Миру</div>
+					</div>
+				</div>
+			</header>
+			<div class="main-block">
+				<h2 class="berry-font zagolovki">категории</h2>
+				<br /><br />
+				<div
+					class="berry-font"
+					style="
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: center;
+						gap: 11vw;
+						margin: 0 auto;
+					"
+				>
+					<div class="categories">открытки</div>
+					<div class="categories">календари</div>
+					<div class="categories">раскраски</div>
+					<div class="categories" style="margin-top: -6vw">сумки</div>
+					<div class="categories" style="margin-top: -6vw">картины</div>
+					<div class="categories" style="margin-top: -6vw">брелочки</div>
+					<div class="categories" style="margin-top: -8vw">пазлы</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="goods-container container">
+			<div class="category-container" id="card">
+				<h2 class="category-zagolovok berry-font">открытки</h2>
+				<div class="goods">
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="cd-1">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="cd-2">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="cd-3">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="cd-4">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="cd-5">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="cd-6">
+							Добавить в корзину
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="category-container" id="calendar">
+				<h2 class="category-zagolovok berry-font">календари</h2>
+				<div class="goods">
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="cl-1">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="cl-2">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="cl-3">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="cl-4">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="cl-5">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="cl-6">
+							Добавить в корзину
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="category-container" id="art-off">
+				<h2 class="category-zagolovok berry-font">раскраски</h2>
+				<div class="goods">
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="ao-1">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="ao-2">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="ao-3">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="ao-4">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="ao-5">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="ao-6">
+							Добавить в корзину
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="category-container" id="bags">
+				<h2 class="category-zagolovok berry-font">сумки</h2>
+				<div class="goods">
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="bg-1">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="bg-2">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="bg-3">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="bg-4">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="bg-5">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="bg-6">
+							Добавить в корзину
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="category-container" id="arts">
+				<h2 class="category-zagolovok berry-font">картины</h2>
+				<div class="goods">
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="ar-1">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="ar-2">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="ar-3">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="ar-4">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="ar-5">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="ar-6">
+							Добавить в корзину
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="category-container" id="pendant">
+				<h2 class="category-zagolovok berry-font">брелочки</h2>
+				<div class="goods">
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="pd-1">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="pd-2">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="pd-3">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="pd-4">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="pd-5">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="pd-6">
+							Добавить в корзину
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="category-container" id="puzzle">
+				<h2 class="category-zagolovok berry-font">пазлы</h2>
+				<div class="goods">
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="pz-1">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="pz-2">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="pz-3">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="pz-4">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="pz-5">
+							Добавить в корзину
+						</button>
+					</div>
+					<div class="good-item-cont">
+						<div class="good-photo"></div>
+						<div class="good-price">100 руб.</div>
+						<button class="add-good-button" data-article="pz-6">
+							Добавить в корзину
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<div
+				class="container"
+				style="
+					display: flex;
+					justify-content: space-between;
+					height: 100%;
+					align-items: center;
+				"
+			>
+				<div class="footer-cont">
+					<div
+						class="footer-links"
+						style="background-image: url(фото/инста.png)"
+					></div>
+					<div>instagram</div>
+					<a href="#">@elizaveta.myagkaya</a>
+				</div>
+				<div class="footer-cont">
+					<div class="footer-links" style="background-image: url(фото/вк.png)"></div>
+					<div>VKontakte</div>
+					<a href="#">vk.com/lizon_zon_zon</a>
+				</div>
+				<div class="footer-cont">
+					<div
+						class="footer-links"
+						style="background-image: url(фото/почта.png)"
+					></div>
+					<div>mail</div>
+					<a href="#">svobodni.xudognik@yandex.ru</a>
+				</div>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<script src="main.js"></script>
+		<script src="login.js"></script>
+	</body>
 </html>
