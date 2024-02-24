@@ -183,7 +183,7 @@ button:hover {
 .good-photo {
 	border-radius: 65px;
 	width: clamp(100px, 17vw, 364px);
-	height: clamp(125px, 40.7vh, 440px);
+	height: clamp(125px, 20vw, 440px);
 	background-color: rgba(207, 222, 255, 0.37);
 }
 .good-item-cont button, .basket-clear, .register-cont form button, .login-cont form button {
